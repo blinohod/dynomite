@@ -67,6 +67,8 @@ AC_CHECK_HEADERS([execinfo.h],
   [AC_DEFINE(HAVE_BACKTRACE, [1], [Define to 1 if backtrace is supported])], [])
 AC_CHECK_HEADERS([sys/epoll.h], [], [])
 AC_CHECK_HEADERS([sys/event.h], [], [])
+AC_CHECK_HEADERS([libio.h],
+  [AC_DEFINE(HAVE_LIBIO_H, [1], [Define to 1 if libio.h present])], [])
 
 # Checks for libraries
 AC_CHECK_LIB([m], [pow])
