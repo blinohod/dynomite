@@ -4,8 +4,10 @@
 # ifndef NULL
 #  define NULL 0
 # endif
-#else
+#elif HAVE_LIBIO_H
 # include <libio.h> // For NULL
+#else
+#define NULL 0
 #endif
 #include "dyn_types.h"
 #include "dyn_dict_msg_id.h"
